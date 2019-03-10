@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import {Router} from "@angular/router";
+import { WherePipe } from 'angular-pipes';
+import { PluckPipe } from 'angular-pipes';
+import { ToArrayPipe } from 'angular-pipes';
 
 
 
@@ -14,7 +17,8 @@ export class EditProjectComponent implements OnInit {
   //projects: Array<any>;
   
   constructor(private ProjectService: ProjectService, private router: Router) { }
-  PROJECTID = window.localStorage.getItem("editProjectId")
+  PROJECTID = window.localStorage.getItem("editProjectId");
+ 
   ngOnInit() {
     
     
@@ -61,10 +65,7 @@ export class EditProjectComponent implements OnInit {
 
   }
 
-  aEqualsOne(item) {
-    return item.projectId === 1;
-}
-
+  
 
 
  

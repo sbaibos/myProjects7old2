@@ -17,7 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let myProject of projects | filter :{projectId:PROJECTID}">
+  <tr *ngFor="let myProject of projects | toArray ">
     <!-- <td class="hidden">{{myProject.id}}</td> -->
     <td>{{myProject.projectId }}</td>
     <td>{{myProject.name}}</td>
