@@ -10,6 +10,8 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
 import { ListProjectComponent } from './components/list-project/list-project.component';
 
+import {FilterPipe} from './pipes/filter.pipe';
+
 
 
 
@@ -20,6 +22,7 @@ import { ListProjectComponent } from './components/list-project/list-project.com
     AddProjectComponent,
     EditProjectComponent,
     ListProjectComponent,
+    FilterPipe
     
     
       ],

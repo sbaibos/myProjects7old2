@@ -14,12 +14,12 @@ export class EditProjectComponent implements OnInit {
   //projects: Array<any>;
   
   constructor(private ProjectService: ProjectService, private router: Router) { }
-
+  PROJECTID = window.localStorage.getItem("editProjectId")
   ngOnInit() {
     
-    let projectId = window.localStorage.getItem("editProjectId")
+    
 
-    console.log("user id is " + projectId);
+   console.log("user id is " + this.PROJECTID);
 
     this.ProjectService.getProjects().subscribe(data => {
       this.projects = data;

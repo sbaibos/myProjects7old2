@@ -17,9 +17,9 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let myProject of projects">
+  <tr *ngFor="let myProject of projects | filter :{projectId:PROJECTID}">
     <!-- <td class="hidden">{{myProject.id}}</td> -->
-    <td>{{myProject.projectId}}</td>
+    <td>{{myProject.projectId }}</td>
     <td>{{myProject.name}}</td>
     <td>{{myProject.dateStartEnd}}</td>
     
