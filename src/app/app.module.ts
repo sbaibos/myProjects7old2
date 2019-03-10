@@ -11,7 +11,8 @@ import { EditProjectComponent } from './components/edit-project/edit-project.com
 import { ListProjectComponent } from './components/list-project/list-project.component';
 
 import {FilterPipe} from './pipes/filter.pipe';
-import { NgPipesModule } from 'angular-pipes';
+
+import { CustomPipesModule } from 'ngx-custom-pipes';
 
 
 
@@ -33,7 +34,7 @@ import { NgPipesModule } from 'angular-pipes';
     BrowserModule,
     AppRoutingModule,
   HttpClientModule,
-  NgPipesModule 
+  CustomPipesModule 
   
     
   ],

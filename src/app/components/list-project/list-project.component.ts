@@ -14,7 +14,7 @@ export class ListProjectComponent implements OnInit {
   projects: Object;
   //projects:ProjectModel[];
 
-  
+ 
 
   constructor(private ProjectService: ProjectService, private router: Router) { }
 
@@ -31,8 +31,10 @@ export class ListProjectComponent implements OnInit {
 
     ProjectDetails(myProject: ProjectModel){
 
-      window.localStorage.removeItem("editProjectId");
-    window.localStorage.setItem("editProjectId", myProject.projectId.toString());
+     // window.localStorage.removeItem("editProjectId");
+    //window.localStorage.setItem("editProjectId", myProject.projectId.toString());
+	window.localStorage.removeItem("editProjectName");
+    window.localStorage.setItem("editProjectName", myProject.name.toString());
       this.router.navigate(['edit-project']);
     }
 

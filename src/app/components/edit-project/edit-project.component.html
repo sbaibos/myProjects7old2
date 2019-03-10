@@ -17,7 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let myProject of projects | toArray ">
+  <tr *ngFor="let myProject of projects | filterBy: PROJECTNAME">
     <!-- <td class="hidden">{{myProject.id}}</td> -->
     <td>{{myProject.projectId }}</td>
     <td>{{myProject.name}}</td>
@@ -29,3 +29,4 @@
 </table>
 
 <button (click)="backToMain()">back</button>
+{{PROJECTNAME}}

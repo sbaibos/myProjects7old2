@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import {Router} from "@angular/router";
-import { WherePipe } from 'angular-pipes';
-import { PluckPipe } from 'angular-pipes';
-import { ToArrayPipe } from 'angular-pipes';
+import { CustomPipesModule } from 'ngx-custom-pipes'
 
 
 
@@ -17,13 +15,14 @@ export class EditProjectComponent implements OnInit {
   //projects: Array<any>;
   
   constructor(private ProjectService: ProjectService, private router: Router) { }
-  PROJECTID = window.localStorage.getItem("editProjectId");
+  //PROJECTID = window.localStorage.getItem("editProjectId");
+  PROJECTNAME = window.localStorage.getItem("editProjectName");
  
   ngOnInit() {
     
     
 
-   console.log("user id is " + this.PROJECTID);
+   console.log("project name is " + this.PROJECTNAME);
 
     this.ProjectService.getProjects().subscribe(data => {
       this.projects = data;
