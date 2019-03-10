@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectService } from './services/project.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,20 +10,27 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
 import { ListProjectComponent } from './components/list-project/list-project.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AddProjectComponent,
     EditProjectComponent,
-    ListProjectComponent
-  ],
+    ListProjectComponent,
+    
+    
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-	HttpClientModule
+  HttpClientModule
+  
+    
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

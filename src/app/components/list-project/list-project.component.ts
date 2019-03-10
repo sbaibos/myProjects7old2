@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import {ProjectModel} from "../../models/project.model";
+import {Router} from "@angular/router";
+
 
 
 @Component({
@@ -9,27 +11,30 @@ import {ProjectModel} from "../../models/project.model";
   styleUrls: ['./list-project.component.css']
 })
 export class ListProjectComponent implements OnInit {
-  users: Object;
-  myProjects:ProjectModel[];
+  projects: Object;
+  //projects:ProjectModel[];
 
   
 
-  constructor(private ProjectService: ProjectService) { }
+  constructor(private ProjectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
 
     this.ProjectService.getProjects().subscribe(data => {
-        this.users = data
-       console.log(this.users);
+        this.projects = data;
+       console.log("this projects is " + data);
       }
     );
      
     
     }
 
-    firstClick() {
-    this.ProjectService.firstClick();
-  }
+    ProjectDetails(myProject: ProjectModel){
+
+      window.localStorage.removeItem("editProjectId");
+    window.localStorage.setItem("editProjectId", myProject.projectId.toString());
+      this.router.navigate(['edit-project']);
+    }
 
 
     

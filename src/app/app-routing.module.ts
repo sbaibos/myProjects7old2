@@ -8,9 +8,9 @@ import {EditProjectComponent} from "./components/edit-project/edit-project.compo
 const routes: Routes = [
 
  { path: 'login', component: LoginComponent },
-  { path: 'add-user', component: AddProjectComponent },
-  { path: 'list-user', component: ListProjectComponent },
-  { path: 'edit-user', component: EditProjectComponent },
+  { path: 'add-project', component: AddProjectComponent },
+  { path: 'list-project', component: ListProjectComponent },
+  { path: 'edit-project', component: EditProjectComponent },
   {path : '', component : ListProjectComponent}
 
 ];

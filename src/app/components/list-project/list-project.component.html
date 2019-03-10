@@ -1,9 +1,26 @@
-<p>
-  list-project works!
-</p>
 
-<p *ngFor="let myProject of users">
+<h2 > Project Details</h2>
+<button  > Add Project</button>
+<table >
+  <thead>
+  <tr>
+    <!-- <th class="hidden">Id</th> -->
+    <th>Project Name</th>
+    <th>Date start/end</th>
+   
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let myProject of projects">
+    <!-- <td class="hidden">{{myProject.id}}</td> -->
+    <td>{{myProject.name}}</td>
+    <td>{{myProject.dateStartEnd}}</td>
+    <td><button  > Delete</button>
+      <button (click)="ProjectDetails(myProject)"> Details </button></td>
+  </tr>
+  </tbody>
+</table>
 
-  {{myProject.name}}
-</p>
-<button (click)="firstClick()">Click me</button>
+<div *ngFor="let myProject of projects | keyvalue">
+  Key: <b>{{myProject.key}}</b> and Value: <b>{{myProject.value}}</b>
+</div>

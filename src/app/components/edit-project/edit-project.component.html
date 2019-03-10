@@ -1,3 +1,31 @@
 <p>
   edit-project works!
 </p>
+
+
+<h2 > Project Details</h2>
+<button  > Add Project</button>
+<table >
+  <thead>
+  <tr>
+    <!-- <th class="hidden">Id</th> -->
+    <th> id</th>
+    <th> name</th>
+    <th> date</th>
+    
+   
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let myProject of projects">
+    <!-- <td class="hidden">{{myProject.id}}</td> -->
+    <td>{{myProject.projectId}}</td>
+    <td>{{myProject.name}}</td>
+    <td>{{myProject.dateStartEnd}}</td>
+    
+     
+  </tr>
+  </tbody>
+</table>
+
+<button (click)="backToMain()">back</button>
