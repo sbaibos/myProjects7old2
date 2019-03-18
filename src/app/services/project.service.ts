@@ -22,10 +22,12 @@ projects: ProjectModel[];
   
 
   constructor(private http: HttpClient) { }
-  basegUrl  = "http://sbaibos.com/sotostheme/api/myprojects7.php";
+  basegUrl  = "/api/";
   //configUrl = 'https://reqres.in/api/users';
+  api = 'api';
   getProjects(){
-   return  this.http.get(this.basegUrl);
+   //return  this.http.get('api/');
+    return this.http.get('/api')
    }
 //that works in an api that takes arguments
 

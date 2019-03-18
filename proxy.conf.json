@@ -1,0 +1,9 @@
+{
+   "/api/*": {
+     "target": "my-json-server.typicode.com/sbaibos/myProjects7",
+     "secure": false,
+     "pathRewrite": {"^/api" : ""},
+     "changeOrigin":true,
+     "logLevel": "debug"
+   }
+ }
