@@ -13,14 +13,14 @@
   <tbody>
   <tr *ngFor="let myProject of projects">
     <!-- <td class="hidden">{{myProject.id}}</td> -->
-    <td>{{myProject.name}}</td>
-    <td>{{myProject.dateStartEnd}}</td>
+    <td>{{myProject.projectId}}</td>
+	 <td>{{myProject.name}}</td>
     <td><button  > Delete</button>
       <button (click)="ProjectDetails(myProject)"> Details </button></td>
   </tr>
   </tbody>
 </table>
 
-<div *ngFor="let myProject of projects | keyvalue">
+<!-- <div *ngFor="let myProject of projects | keyvalue">
   Key: <b>{{myProject.key}}</b> and Value: <b>{{myProject.value}}</b>
-</div>
+</div> -->

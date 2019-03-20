@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./list-project.component.css']
 })
 export class ListProjectComponent implements OnInit {
-  projects: Object;
+  projects: any[];
   //projects:ProjectModel[];
 
  
@@ -20,14 +20,14 @@ export class ListProjectComponent implements OnInit {
 
   ngOnInit() {
 
-    this.ProjectService.getProjects().subscribe(data => {
-        this.projects = data;
-       console.log("this projects is " + data);
-      }
-    );
-     
+    this.ProjectService.getProjects().subscribe((data : any[])=>{
+      console.log(data);
+      this.projects = data;
+    })
     
     }
+
+  
 
     ProjectDetails(myProject: ProjectModel){
 

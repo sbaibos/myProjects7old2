@@ -22,13 +22,15 @@ projects: ProjectModel[];
   
 
   constructor(private http: HttpClient) { }
-  basegUrl  = "/api/";
+  basegUrl  = "http://localhost:3000";
   //configUrl = 'https://reqres.in/api/users';
   api = 'api';
   getProjects(){
    //return  this.http.get('api/');
-    return this.http.get('/api')
+    return this.http.get(this.basegUrl +"/projects");
    }
+   
+   
 //that works in an api that takes arguments
 
 // getProjectById(id: number) {

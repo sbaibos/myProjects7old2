@@ -11,7 +11,7 @@ import { CustomPipesModule } from 'ngx-custom-pipes'
   styleUrls: ['./edit-project.component.css']
 })
 export class EditProjectComponent implements OnInit {
-  projects: Object;
+  projects: any[];
   //projects: Array<any>;
   
   constructor(private ProjectService: ProjectService, private router: Router) { }
@@ -24,10 +24,10 @@ export class EditProjectComponent implements OnInit {
 
    console.log("project name is " + this.PROJECTNAME);
 
-    this.ProjectService.getProjects().subscribe(data => {
+   
+      this.ProjectService.getProjects().subscribe((data : any[])=>{
+      console.log(data);
       this.projects = data;
-
-     
 
       console.log("this projects is " + this.projects);
 

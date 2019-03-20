@@ -1,6 +1,6 @@
 {
    "/api/*": {
-     "target": "my-json-server.typicode.com/sbaibos/myProjects7",
+     "target": "http://my-json-server.typicode.com/sbaibos/myProjects7/db",
      "secure": false,
      "pathRewrite": {"^/api" : ""},
      "changeOrigin":true,
