@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "id": 1,
+      "name": "Philomama",
+      "employer": "freelancing",
+      "dateStartEnd": "2010 -2011",
+      "description": "Support for pregnant women. The first version was done in Microsoft expression web. The second in drupal 6 ",
+      "analyticalDescription": "http://sbaibos.com/philomama.html ",
+      "siteUrl": "http://www.sbaibos.com/philomama/",
+      "photo": "http://sbaibos.com/img/philomama1.jpg",
+      "technologiesUsed": "Drupal 6, Drupal tools, Artisteer, CSS"
+    },
+    {
       "id": 2,
       "name": "Patrio Homa",
       "employer": "freelancing",
@@ -263,28 +274,6 @@
       "analyticalDescription": "",
       "photo": "http://sbaibos.com/img/recipies.jpg",
       "technologiesUsed": "HTML-5, CSS-3,Angular 7, Bootstrap"
-    },
-    {
-      "id": 27,
-      "name": "admin2",
-      "employer": "test employer",
-      "dateStartEnd": "11 march",
-      "description": "test description",
-      "analyticalDescription": "asd",
-      "siteUrl": "asd",
-      "photo": "asd",
-      "technologiesUsed": "asd"
-    },
-    {
-      "id": 28,
-      "name": "Dr IQ",
-      "employer": "test employer",
-      "dateStartEnd": "11 march",
-      "description": "test description",
-      "analyticalDescription": "asd",
-      "siteUrl": "asd",
-      "photo": "asd",
-      "technologiesUsed": "asd"
     }
   ]
 }

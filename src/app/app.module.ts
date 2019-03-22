@@ -13,6 +13,7 @@ import { ListProjectComponent } from './components/list-project/list-project.com
 import {FilterPipe} from './pipes/filter.pipe';
 
 import { CustomPipesModule } from 'ngx-custom-pipes';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -34,7 +35,8 @@ import { CustomPipesModule } from 'ngx-custom-pipes';
     BrowserModule,
     AppRoutingModule,
   HttpClientModule,
-  CustomPipesModule 
+  CustomPipesModule,
+  ReactiveFormsModule 
   
     
   ],

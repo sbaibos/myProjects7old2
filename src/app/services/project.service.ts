@@ -22,15 +22,36 @@ projects: ProjectModel[];
   
 
   constructor(private http: HttpClient) { }
-  basegUrl  = "http://localhost:3000";
+  baseUrl  = "http://localhost:3000/projects";
   //configUrl = 'https://reqres.in/api/users';
   api = 'api';
   getProjects(){
    //return  this.http.get('api/');
-    return this.http.get(this.basegUrl +"/projects");
+    return this.http.get(this.baseUrl);
    }
    
    
+   getProjectById(id: number) {
+    return this.http.get<ProjectModel>(this.baseUrl + '/' + id);
+  }
+
+  createProject(project: ProjectModel) {
+    return this.http.post(this.baseUrl, project);
+  }
+
+  updateProject(project: ProjectModel) {
+    return this.http.put(this.baseUrl + '/' + project.id, project);
+  }
+
+  deleteProject(id: number) {
+    return this.http.delete(this.baseUrl + '/' + id);
+  }
+
+
+
+
+
+
 //that works in an api that takes arguments
 
 // getProjectById(id: number) {

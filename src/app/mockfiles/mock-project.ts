@@ -2,7 +2,7 @@ import { ProjectModel } from '../models/project.model';
 
 export const PROJECTS: ProjectModel[] = [
   {
-	  projectId:1,
+	  id:1,
     name : "Philomama",
     employer : "freelancing",
 	dateStartEnd:"2010 -2011",
@@ -13,7 +13,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Drupal 6, Drupal tools, Artisteer, CSS"
 	},
  { 
- projectId:2,
+ id:2,
     name : "Patrio Homa",
     employer : "freelancing",
 	dateStartEnd:"2010 -2011",
@@ -24,7 +24,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Drupal 6, Drupal tools, CSS"
 	},
 	{
-	projectId:3,
+	id:3,
     name : "mtsirigotis",
     employer : "freelancing",
 	dateStartEnd:"august 2011 - sept 2011",
@@ -35,7 +35,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Drupal 6, Drupal tools, CSS, HTML"
 	},
 	{
-	projectId:4,
+	id:4,
     name : "Deksameni",
     employer : "freelancing",
 	dateStartEnd:"Oct 2011",
@@ -46,7 +46,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Blogspot, HTML"
 	},
 	{
-	projectId:5,
+	id:5,
     name : "Site Builder",
     employer : "freelancing",
 	dateStartEnd:"March 2015 - April 2015 ",
@@ -57,7 +57,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Drupal 6, Organic groups (Drupal)"
 	},
 	{
-	projectId:6,
+	id:6,
     name : "Macinfoweb test site in Drupal",
     employer : "Macinfoweb",
 	dateStartEnd:"April 2015 - May 2015 ",
@@ -68,7 +68,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Drupal 7, Google maps, Views(Drupal), Taxonomy(Drupal), Artisteer, CSS, Jquery for drupal"
 	},
 	{
-	projectId:7,
+	id:7,
     name : "MMvirtual cakephp site",
     employer : "MMvirtual",
 	dateStartEnd:"30 April 2015 - 6 May 2015 ",
@@ -79,7 +79,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Cakephp 2.5.4 , php , HTML"
 	},
 	{
-	projectId:8,
+	id:8,
     name : "Wideservices Joomla!/bootstrap",
     employer : "Wideservices",
 	dateStartEnd:"20 Oct 2015 - 26 Oct 2015",
@@ -90,7 +90,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Bootstrap, Joomla!, PHP, HTML-5, Javascript,CSS"
 	},
 	{
-	projectId:9,
+	id:9,
     name : "Atypon demo site",
     employer : "Atypon",
 	dateStartEnd:"03 Oct 2016 - 7 Oct 2016 ",
@@ -101,7 +101,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML ,CSS, Jquery"
 	},
 	{
-	projectId:10,
+	id:10,
     name : "Velti demo site",
     employer : "Velti",
 	dateStartEnd:"13 January 2017 - 16 January 2017",
@@ -112,7 +112,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Bootstrap,HTML-5,CSS-3,Jquery"
 	},
 	{
-	projectId:11,
+	id:11,
     name : "Athena",
     employer : "Mendor",
 	dateStartEnd:"Oct-2016 to dec 2016 (in conjunction with others )",
@@ -123,7 +123,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Wordpress, HTML,CSS-3,Artisteer,Jquery"
 	},
 	{
-	projectId:12,
+	id:12,
     name : "Filoipirotiki",
     employer : "Mendor",
 	dateStartEnd:"Oct-2016 to dec 2016 (in conjunction with others )",
@@ -134,7 +134,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Wordpress, HTML,CSS-3,Artisteer"
 	},
 	{
-	projectId:13,
+	id:13,
     name : "Mendor.gr site",
     employer : "Mendor",
 	dateStartEnd:"Oct-2016 to dec 2016 (in conjunction with others )",
@@ -145,7 +145,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5,CSS-3,Javascript,Jquery, Foundstrap, Theme forest"
 	},
 	{
-	projectId:14,
+	id:14,
     name : "Sbaibos.com",
     employer : "n/a",
 	dateStartEnd:"April 2017 – May 2017 / ongoing",
@@ -156,7 +156,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5,CSS-3,Jquery,Javascript,Ajax,Angular,PHP,SQL"
 	},
 	{
-	projectId:15,
+	id:15,
     name : "Plumber x in wooCommerce",
     employer : "freelancing",
 	dateStartEnd:"08 Jan 2017 - 14 March 2017",
@@ -167,7 +167,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Wordpress, wooCommerce, Visual Composer"
 	},
 	{
-	projectId:16,
+	id:16,
     name : "Demo site for extend",
     employer : "Extend",
 	dateStartEnd:"15 Oct 2017 - 20 Oct 2017",
@@ -178,7 +178,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5, CSS-3, Jquery, Javascript"
 	},
 	{
-	projectId:17,
+	id:17,
     name : "Erani Veterans Football club",
     employer : "none/Eranis veterans football club",
 	dateStartEnd:"august 2017-ongoing",
@@ -189,7 +189,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Wordpress,php,CSS, Jquery, Convert bootstrap to wordpress, Create a logo using HTML 5 canvas and javascript"
 	},
 	{
-	projectId:18,
+	id:18,
     name : "Opencart 2.3",
     employer : "Oasis Pysktes",
 	dateStartEnd:"20 april 2018 - 23 april 2018",
@@ -200,7 +200,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"Opencart 2.3,CSS-3"
 	},
 	{
-	projectId:19,
+	id:19,
     name : "Rest demo with AJAX",
     employer : "None/ demo for Agroknow",
 	dateStartEnd:"15 march 2018 - 20 march 2018",
@@ -211,7 +211,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"php Bootstrap, HTML5, CSS3 ,JAvascript, Jquery"
 	},
 	{
-	projectId:20,
+	id:20,
     name : "Angular Demo",
     employer : "Test project for m-hospitality",
 	dateStartEnd:"20 April 2018 - 26 April 2018",
@@ -222,7 +222,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5, CSS-3,Angular,Bootstrap"
 	},
 	{
-	projectId:21,
+	id:21,
     name : "Aurelia demo",
     employer : "None",
 	dateStartEnd:"22 May 2018 - 29 May 2018",
@@ -233,7 +233,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5, CSS-3,Aurelia,Bootstrap"
 	},
 	{
-	projectId:22,
+	id:22,
     name : "My projects",
     employer : "None",
 	dateStartEnd:"01 June 2018 - 07 June 2018",
@@ -244,7 +244,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5, CSS-3,Angular,Bootstrap"
 	},
 	{
-	projectId:23,
+	id:23,
     name : "World cup 2018",
     employer : "None",
 	dateStartEnd:"15 June 2018 - 15 July 2018",
@@ -255,7 +255,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5, CSS-3,Angular,Bootstrap"
 	},
 	{
-	projectId:24,
+	id:24,
     name : "Recipes",
     employer : "None",
 	dateStartEnd:"July 2018",
@@ -266,7 +266,7 @@ export const PROJECTS: ProjectModel[] = [
     technologiesUsed :"HTML-5, CSS-3,Angular,Bootstrap"
 	},
 	{
-	projectId:25,
+	id:25,
     name : "Angular 7 Recipes ",
     employer : "None",
 	dateStartEnd:"Feb 2019",

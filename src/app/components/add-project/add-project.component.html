@@ -1,3 +1,51 @@
 <p>
   add-project works!
 </p>
+
+
+<div class="col-md-6">
+  <h2 class="text-center">Add User</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Project Name</label>
+      <input  formControlName="name" placeholder="Project Name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="employer">Employer Name:</label>
+      <input formControlName="employer" placeholder="employer Name" name="employer" class="form-control" id="employer">
+    </div>
+
+    <div class="form-group">
+      <label for="dateStartEnd">Date start /end:</label>
+      <input formControlName="dateStartEnd" placeholder="date start /end" name="dateStartEnd" class="form-control" id="dateStartEnd">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="analyticalDescription">Analytical Description:</label>
+      <input formControlName="analyticalDescription" placeholder="Analytical Description" name="analyticalDescription" class="form-control" id="analyticalDescription">
+    </div>
+
+    <div class="form-group">
+      <label for="siteUrl">siteUrl:</label>
+      <input formControlName="siteUrl" placeholder="siteUrl" name="siteUrl" class="form-control" id="siteUrl">
+    </div>
+
+    <div class="form-group">
+      <label for="photo">photo:</label>
+      <input formControlName="photo" placeholder="photo" name="photo" class="form-control" id="photo">
+    </div>
+
+    <div class="form-group">
+      <label for="technologiesUsed">technologiesUsed:</label>
+      <input formControlName="technologiesUsed" placeholder="technologiesUsed" name="technologiesUsed" class="form-control" id="technologiesUsed">
+    </div>
+
+    <button >Add</button>
+  </form>
+</div>

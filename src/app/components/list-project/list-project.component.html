@@ -1,6 +1,6 @@
 
 <h2 > Project Details</h2>
-<button  > Add Project</button>
+<button  (click)="addProject()"> Add Project</button>
 <table >
   <thead>
   <tr>
@@ -13,10 +13,12 @@
   <tbody>
   <tr *ngFor="let myProject of projects">
     <!-- <td class="hidden">{{myProject.id}}</td> -->
-    <td>{{myProject.projectId}}</td>
-	 <td>{{myProject.name}}</td>
-    <td><button  > Delete</button>
-      <button (click)="ProjectDetails(myProject)"> Details </button></td>
+    <td>{{myProject.id}}</td>
+   <td>{{myProject.name}}</td>
+   <td>
+      <button (click)="ProjectDetails(myProject)"> Details </button>
+      <button (click)="deleteProject(myProject)"> Delete </button>
+    </td>
   </tr>
   </tbody>
 </table>

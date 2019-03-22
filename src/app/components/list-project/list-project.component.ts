@@ -38,7 +38,16 @@ export class ListProjectComponent implements OnInit {
       this.router.navigate(['edit-project']);
     }
 
+    deleteProject(project: ProjectModel): void {
+      this.ProjectService.deleteProject(project.id)
+        .subscribe( data => {
+          this.projects = this.projects.filter(u => u !== project);
+        })
+    };
 
+    addProject(): void {
+      this.router.navigate(['add-project']);
+    };
     
   
 
