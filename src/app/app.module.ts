@@ -14,6 +14,7 @@ import {FilterPipe} from './pipes/filter.pipe';
 
 import { CustomPipesModule } from 'ngx-custom-pipes';
 import {ReactiveFormsModule} from "@angular/forms";
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 
 
@@ -26,7 +27,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     AddProjectComponent,
     EditProjectComponent,
     ListProjectComponent,
-    FilterPipe
+    FilterPipe,
+    ProjectDetailsComponent
     
     
     

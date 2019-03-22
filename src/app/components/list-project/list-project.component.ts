@@ -35,7 +35,7 @@ export class ListProjectComponent implements OnInit {
     //window.localStorage.setItem("editProjectId", myProject.projectId.toString());
 	window.localStorage.removeItem("editProjectName");
     window.localStorage.setItem("editProjectName", myProject.name.toString());
-      this.router.navigate(['edit-project']);
+      this.router.navigate(['project-details']);
     }
 
     deleteProject(project: ProjectModel): void {
