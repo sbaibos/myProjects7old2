@@ -3,6 +3,10 @@ import { ProjectService } from '../../services/project.service';
 import {Router} from "@angular/router";
 import { CustomPipesModule } from 'ngx-custom-pipes'
 
+import {ProjectModel} from "../../models/project.model";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {first} from "rxjs/operators";
+
 
 
 @Component({
@@ -11,60 +15,54 @@ import { CustomPipesModule } from 'ngx-custom-pipes'
   styleUrls: ['./edit-project.component.css']
 })
 export class EditProjectComponent implements OnInit {
-  projects: any[];
-  //projects: Array<any>;
+  project: ProjectModel;
+  editForm: FormGroup;
   
-  constructor(private ProjectService: ProjectService, private router: Router) { }
-  //PROJECTID = window.localStorage.getItem("editProjectId");
-  PROJECTNAME = window.localStorage.getItem("editProjectName");
- 
+  constructor(private formBuilder: FormBuilder, private ProjectService: ProjectService, private router: Router) { }
+  
+    
   ngOnInit() {
     
-    
-
-   console.log("project name is " + this.PROJECTNAME);
-
-   
-      this.ProjectService.getProjects().subscribe((data : any[])=>{
-      console.log(data);
-      this.projects = data;
-
-      console.log("this projects is " + this.projects);
-
-      const mapped2 = Object.keys(data).map(key => data[key]);
-      
-      
-      
-      
-      console.log("mapped is " + mapped2);
-
-
-     }
-  );
+    let projectId = window.localStorage.getItem("projectDetails2");
+    console.log("project id is " + projectId);
+    // if(!projectId) {
+    //   alert("Invalid action.")
+    //   this.router.navigate(['list-project']);
+    //   return;
+    // }
+    this.editForm = this.formBuilder.group({
+      id: [],
+      name: ['', Validators.required],
+      employer: ['', Validators.required],
+      dateStartEnd: ['', Validators.required],
+      description: ['', Validators.required],
+      analyticalDescription: ['', Validators.required],
+      siteUrl: ['', Validators.required],
+      photo: ['', Validators.required],
+      technologiesUsed: ['', Validators.required]
+    });
+    this.ProjectService.getProjectById(+projectId)
+      .subscribe( data => {
+        this.editForm.setValue(data);
+      });
+ 
 
   
-//    let result = this.projects.filter((projectId) => this.projects.projectId === projectId);
-   
-//    console.log(result);
-
-//   const obj = {5.0: 10, 28.0: 14, 3.0: 6};
-
-// const mapped = Object.keys(this.projects).map(key => this.projects[key]);
-
-// this.projects.isArray(obj)
-
-
-// console.log(mapped);
-
-
-
-
-
-
-
   }
 
   
+  onSubmit() {
+    this.ProjectService.updateProject(this.editForm.value)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate(['list-project']);
+        },
+        error => {
+          alert(error);
+        });
+  }
+
 
 
  

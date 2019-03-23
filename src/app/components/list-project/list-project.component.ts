@@ -33,8 +33,8 @@ export class ListProjectComponent implements OnInit {
 
      // window.localStorage.removeItem("editProjectId");
     //window.localStorage.setItem("editProjectId", myProject.projectId.toString());
-	window.localStorage.removeItem("editProjectName");
-    window.localStorage.setItem("editProjectName", myProject.name.toString());
+	window.localStorage.removeItem("projectDetails");
+    window.localStorage.setItem("projectDetails", myProject.name.toString());
       this.router.navigate(['project-details']);
     }
 
@@ -49,6 +49,12 @@ export class ListProjectComponent implements OnInit {
       this.router.navigate(['add-project']);
     };
     
+    EditProject(myProject: ProjectModel){
+    
+      window.localStorage.removeItem("projectDetails2");
+      window.localStorage.setItem("projectDetails2", myProject.id.toString());
+      this.router.navigate(['edit-project']);
+     }
   
 
 }

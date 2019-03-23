@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import {Router} from "@angular/router";
 import { CustomPipesModule } from 'ngx-custom-pipes'
+import {ProjectModel} from "../../models/project.model";
 
 @Component({
   selector: 'app-project-details',
@@ -11,7 +12,7 @@ import { CustomPipesModule } from 'ngx-custom-pipes'
 export class ProjectDetailsComponent implements OnInit {
   projects: any[];
   constructor(private ProjectService: ProjectService, private router: Router) { }
-  PROJECTNAME = window.localStorage.getItem("editProjectName");
+  PROJECTNAME = window.localStorage.getItem("projectDetails");
   ngOnInit() {
 
     console.log("project name is " + this.PROJECTNAME);
@@ -21,14 +22,7 @@ export class ProjectDetailsComponent implements OnInit {
     console.log(data);
     this.projects = data;
 
-    console.log("this projects is " + this.projects);
-
-    const mapped2 = Object.keys(data).map(key => data[key]);
-    
-    
-    
-    
-    console.log("mapped is " + mapped2);
+       
 
 
    }
@@ -36,6 +30,15 @@ export class ProjectDetailsComponent implements OnInit {
 
 
   }
+
+  
+
+  EditProject(myProject: ProjectModel){
+    
+   window.localStorage.removeItem("projectDetails2");
+      window.localStorage.setItem("projectDetails2", myProject.id.toString());
+      this.router.navigate(['edit-project']);
+   }
 
 
   backToMain(){

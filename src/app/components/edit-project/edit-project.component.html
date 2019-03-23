@@ -1,31 +1,57 @@
 <p>
   edit-project works!
 </p>
+<div  *ngFor="let myProject of projects | filterBy: PROJECTNAME">
 
+project id is{{myProject.id}}
 
-<h2 > Project Details</h2>
-<button  > Add Project</button>
-<table >
-  <thead>
-  <tr>
-    <!-- <th class="hidden">Id</th> -->
-    <th> id</th>
-    <th> name</th>
-    <th> date</th>
-    
-   
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let myProject of projects | filterBy: PROJECTNAME">
-    <!-- <td class="hidden">{{myProject.id}}</td> -->
-    <td>{{myProject.id }}</td>
-    <td>{{myProject.name}}</td>
-    <td>{{myProject.dateStartEnd}}</td>
-    
-     
-  </tr>
-  </tbody>
-</table>
+</div>
+
+<div class="col-md-6">
+  <h2 class="text-center">Edit Project</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Project Name</label>
+      <input  formControlName="name" placeholder="Project Name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="employer">Employer Name:</label>
+      <input formControlName="employer" placeholder="employer Name" name="employer" class="form-control" id="employer">
+    </div>
+
+    <div class="form-group">
+      <label for="dateStartEnd">Date start /end:</label>
+      <input formControlName="dateStartEnd" placeholder="date start /end" name="dateStartEnd" class="form-control" id="dateStartEnd">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="analyticalDescription">Analytical Description:</label>
+      <input formControlName="analyticalDescription" placeholder="Analytical Description" name="analyticalDescription" class="form-control" id="analyticalDescription">
+    </div>
+
+    <div class="form-group">
+      <label for="siteUrl">siteUrl:</label>
+      <input formControlName="siteUrl" placeholder="siteUrl" name="siteUrl" class="form-control" id="siteUrl">
+    </div>
+
+    <div class="form-group">
+      <label for="photo">photo:</label>
+      <input formControlName="photo" placeholder="photo" name="photo" class="form-control" id="photo">
+    </div>
+
+    <div class="form-group">
+      <label for="technologiesUsed">technologiesUsed:</label>
+      <input formControlName="technologiesUsed" placeholder="technologiesUsed" name="technologiesUsed" class="form-control" id="technologiesUsed">
+    </div>
+
+    <button >save</button>
+  </form>
+</div>
 
 <button (click)="backToMain()">back</button>
