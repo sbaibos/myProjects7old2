@@ -23,7 +23,8 @@ projects: ProjectModel[];
 
   constructor(private http: HttpClient) { }
  // baseUrl  = "http://localhost:3000/projects";
- baseUrl  = "http://www.sbaibos.com/sotostheme/api/myprojects7.php";
+ baseUrl  = "http://sbaibos.com/sotostheme/api/myprojects7.php";
+ 
   api = 'api';
   getProjects(){
    //return  this.http.get('api/');
