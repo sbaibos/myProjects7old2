@@ -24,8 +24,9 @@ projects: ProjectModel[];
   constructor(private http: HttpClient) { }
  // baseUrl  = "http://localhost:3000/projects";
  //baseUrl  = "http://sbaibos.com/sotostheme/api/myprojects7.php";
- //baseUrl  = "http://localhost/websites/api/api";
- baseUrl = "/api";
+ baseUrl  = "http://localhost/websites/api/api";
+ //baseUrl = "/api";
+ delete = "http://localhost/websites/api/delete";
  
   
   getProjects(){
@@ -47,7 +48,7 @@ projects: ProjectModel[];
   }
 
   deleteProject(id: number) {
-    return this.http.delete(this.baseUrl + '/' + id);
+    return this.http.delete(this.delete + '/' + id);
   }
 
 
