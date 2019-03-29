@@ -10,7 +10,7 @@ import {ProjectModel} from "../../models/project.model";
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
-  projects: any[];
+  projects: Object;
   constructor(private ProjectService: ProjectService, private router: Router) { }
   PROJECTNAME = window.localStorage.getItem("projectDetails");
   ngOnInit() {
@@ -18,15 +18,15 @@ export class ProjectDetailsComponent implements OnInit {
     console.log("project name is " + this.PROJECTNAME);
 
    
-    this.ProjectService.getProjects().subscribe((data : any[])=>{
-    console.log(data);
-    this.projects = data;
+    this.ProjectService.getProjects().subscribe((data)=>{
+      console.log(data);
+      this.projects = Object.values(data['records']);
+      console.log(this.projects);
+    })
 
        
 
 
-   }
-);
 
 
   }

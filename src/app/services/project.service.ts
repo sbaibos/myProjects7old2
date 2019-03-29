@@ -27,6 +27,7 @@ projects: ProjectModel[];
  baseUrl  = "http://localhost/websites/api/api";
  //baseUrl = "/api";
  delete = "http://localhost/websites/api/delete";
+ update="http://localhost/websites/api/update";
  
   
   getProjects(){
@@ -44,11 +45,11 @@ projects: ProjectModel[];
   }
 
   updateProject(project: ProjectModel) {
-    return this.http.put(this.baseUrl + '/' + project.id, project);
+    return this.http.put(this.update + '/' + project.id, project);
   }
 
   deleteProject(id: number) {
-    return this.http.delete(this.delete + '/' + id);
+    return this.http.delete(this.baseUrl + '/' + id);
   }
 
 
