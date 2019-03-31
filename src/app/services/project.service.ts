@@ -49,7 +49,7 @@ projects: ProjectModel[];
   }
 
   deleteProject(id: number) {
-    return this.http.delete(this.baseUrl + '/' + id);
+    return this.http.delete(this.delete + '/' + id);
   }
 
 

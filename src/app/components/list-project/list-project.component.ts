@@ -45,6 +45,8 @@ export class ListProjectComponent implements OnInit {
          let array = Object.values(data['records']);
           array = array.filter(u => u !== project);
         })
+
+        this.router.navigate(['list-project']);
     };
 
     addProject(): void {
