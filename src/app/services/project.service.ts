@@ -4,6 +4,7 @@ import {PROJECTS} from '../mockfiles/mock-project';
 import {ProjectModel} from "../models/project.model";
 import { HttpClient } from '@angular/common/http'; 
 import { pureObjectDef } from '@angular/core/src/view';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -22,16 +23,10 @@ projects: ProjectModel[];
   
 
   constructor(private http: HttpClient) { }
- 
- //baseUrl  = "http://sbaibos.com/sotostheme/api/api/api";
- //delete = "http://sbaibos.com/sotostheme/api/api/delete";
- //update="http://sbaibos.com/sotostheme/api/api/update";
- 
- baseUrl  = "http://localhost/websites/api/api";
-  delete = "http://localhost/websites/api/delete";
- update="http://localhost/websites/api/update";
- 
-  
+  baseUrl = environment.baseUrl;
+  update = environment.update;
+  delete = environment.delete;
+   
   getProjects(){
    //return  this.http.get('api/');
     return this.http.get(this.baseUrl);
