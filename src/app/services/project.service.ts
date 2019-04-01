@@ -22,11 +22,13 @@ projects: ProjectModel[];
   
 
   constructor(private http: HttpClient) { }
- // baseUrl  = "http://localhost:3000/projects";
- //baseUrl  = "http://sbaibos.com/sotostheme/api/myprojects7.php";
+ 
+ //baseUrl  = "http://sbaibos.com/sotostheme/api/api/api";
+ //delete = "http://sbaibos.com/sotostheme/api/api/delete";
+ //update="http://sbaibos.com/sotostheme/api/api/update";
+ 
  baseUrl  = "http://localhost/websites/api/api";
- //baseUrl = "/api";
- delete = "http://localhost/websites/api/delete";
+  delete = "http://localhost/websites/api/delete";
  update="http://localhost/websites/api/update";
  
   

@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./list-project.component.css']
 })
 export class ListProjectComponent implements OnInit {
-  projects: Object;
+  projects: any[];
   //projects:ProjectModel[];
 
  
@@ -39,14 +39,23 @@ export class ListProjectComponent implements OnInit {
       this.router.navigate(['project-details']);
     }
 
-    deleteProject(project: ProjectModel): void {
+    // deleteProject(project: ProjectModel): void {
+      // this.ProjectService.deleteProject(project.id)
+        // .subscribe( data => {
+         // let array = Object.values(data['records']);
+          // array = array.filter(u => u !== project);
+          
+        // })
+// this.router.navigate(['list-project']);
+        
+    // };
+	
+	 deleteProject(project: ProjectModel): void {
       this.ProjectService.deleteProject(project.id)
         .subscribe( data => {
-         let array = Object.values(data['records']);
-          array = array.filter(u => u !== project);
+          this.projects = this.projects.filter(u => u !== project);
         })
-
-        this.router.navigate(['list-project']);
+		this.router.navigate(['list-project']);
     };
 
     addProject(): void {
