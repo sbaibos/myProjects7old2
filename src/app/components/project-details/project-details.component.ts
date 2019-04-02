@@ -12,7 +12,14 @@ import {ProjectModel} from "../../models/project.model";
 export class ProjectDetailsComponent implements OnInit {
   projects: Object;
   constructor(private ProjectService: ProjectService, private router: Router) { }
-  PROJECTNAME = window.localStorage.getItem("projectDetails");
+  PROJECTNAME = window.localStorage.getItem("projectName");
+  PROJECTEMPLOYER = window.localStorage.getItem("projectEmployer");
+  PROJECTDATE = window.localStorage.getItem("projectDate");
+  PROJECTDESCRIPTION = window.localStorage.getItem("projectDescription");
+  PROJECTANALYTICAL = window.localStorage.getItem("projectAnalyticalDescription");
+  PROJECTURL = window.localStorage.getItem("projectSiteURL");
+  PROJECTPHOTO = window.localStorage.getItem("projectPhoto");
+  PROJECTTECHNOLOGIES = window.localStorage.getItem("projectTechnologiesUsed");
   ngOnInit() {
 
     console.log("project name is " + this.PROJECTNAME);

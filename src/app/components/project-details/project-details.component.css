@@ -1,0 +1,32 @@
+
+    .image{
+		
+		display:block;
+		margin:auto;
+		width: 400px;
+		overflow: hidden;
+				
+		}
+		
+		.parent{
+		overflow: hidden;
+       height: 100%;
+		}
+	.overflow{
+		height: 300px;
+        top: 0;
+		overflow-y:scroll
+		}
+		
+	.image_scale_my_projects:hover{
+-webkit-transform: scale(3, 3);
+-ms-transform: scale(3, 3);
+transform:scale(2, 2);
+transition: all 0.3s ease-in;
+
+
+}	
+
+.image-zindex{
+    z-index:9999;
+    }

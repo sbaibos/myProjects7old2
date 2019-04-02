@@ -34,8 +34,15 @@ export class ListProjectComponent implements OnInit {
 
      // window.localStorage.removeItem("editProjectId");
     //window.localStorage.setItem("editProjectId", myProject.projectId.toString());
-	window.localStorage.removeItem("projectDetails");
-    window.localStorage.setItem("projectDetails", myProject.name.toString());
+	// window.localStorage.removeItem("projectDetails");
+    window.localStorage.setItem("projectName", myProject.name.toString());
+    window.localStorage.setItem("projectEmployer", myProject.employer.toString());
+    window.localStorage.setItem("projectDate", myProject.dateStartEnd.toString());
+    window.localStorage.setItem("projectDescription", myProject.description.toString());
+    window.localStorage.setItem("projectAnalyticalDescription", myProject.analyticalDescription.toString());
+    window.localStorage.setItem("projectSiteURL", myProject.siteUrl.toString());
+    window.localStorage.setItem("projectPhoto", myProject.photo.toString());
+    window.localStorage.setItem("projectTechnologiesUsed", myProject.technologiesUsed.toString());
       this.router.navigate(['project-details']);
     }
 

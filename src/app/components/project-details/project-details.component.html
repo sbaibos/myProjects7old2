@@ -1,27 +1,56 @@
 
-<h2 > Project Details</h2>
-<table >
-  <thead>
-  <tr>
-    <!-- <th class="hidden">Id</th> -->
-    <th> id</th>
-    <th> name</th>
-    <th> date</th>
-    
-   
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let myProject of projects | filterBy: PROJECTNAME">
-    <!-- <td class="hidden">{{myProject.id}}</td> -->
-    <td>{{myProject.id }}</td>
-    <td>{{myProject.name}}</td>
-    <td>{{myProject.dateStartEnd}}</td>
-    <button (click)="EditProject(myProject)"> Edit </button>
-    
-     
-  </tr>
-  </tbody>
-</table>
 
-<button (click)="backToMain()">back</button>
+
+<section class="container section">
+  <div class="container">
+      <h2 > Project Details</h2>
+      <hr>
+    
+ <div class="col-md-12 parent">
+    <div class="row">
+  <div class="col-md-6 image-zindex"> 
+
+    <span   >
+   <img class="image image_scale_my_projects" src="{{PROJECTPHOTO}}">  <!--player image-->
+   
+   </span>
+   
+   </div>
+
+   <div class="col-md-6 overflow"> 
+
+    <span>
+      <h3> {{PROJECTNAME}} </h3>  <!--name and data-->
+      <p> {{PROJECTDESCRIPTION}}  </p>
+      <p>Read more on: <a href="{{PROJECTANALYTICAL}}" target="_blank">{{PROJECTANALYTICAL}}</a>  </p>
+      <p>Site URL:  {{PROJECTURL}}<a href="{{PROJECTURL}}" target="_blank"></a></p>
+      </span>
+   
+   </div>
+  </div><!-- end row -->
+  </div><!--  end col-md-12 -->
+
+</div><!-- end container -->
+
+ 
+   <h3>More Info</h3>
+  <hr>
+  <ul>
+  <li>Employer:<b>{{PROJECTEMPLOYER}}</b> </li>
+   <li>Date start-end: <b>{{PROJECTDATE}}</b></li>
+    <li>Skills Used: <b>{{PROJECTTECHNOLOGIES}}</b></li>
+  </ul>
+ 
+ 
+ 
+ 
+ 
+  
+  
+  <button (click)="backToMain()">back</button>
+
+
+
+
+
+</section>
