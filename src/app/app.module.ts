@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProjectService } from './services/project.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 
-
+import { JwtInterceptor, } from './helpers/jw.interceptor';
+import { ErrorInterceptor } from './helpers/error.interceptor';
+import { fakeBackendProvider } from './helpers/fake-backend';
 
 
 @NgModule({
@@ -42,7 +44,16 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
   
     
   ],
-  providers: [ProjectService],
+  providers: [
+    ProjectService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+  
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
